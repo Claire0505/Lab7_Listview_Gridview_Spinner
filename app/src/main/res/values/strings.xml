@@ -1,4 +1,28 @@
 <resources>
     <string name="app_name">Lab7_ListView_GridView_Spinner</string>
     <string name="image">image</string>
+
+    <integer-array name="imgArray">
+        <item>@drawable/apple</item>
+        <item>@drawable/avocado</item>
+        <item>@drawable/banana</item>
+        <item>@drawable/cherries</item>
+        <item>@drawable/coconut</item>
+        <item>@drawable/grapes</item>
+        <item>@drawable/lemon</item>
+        <item>@drawable/orange</item>
+        <item>@drawable/peach</item>
+    </integer-array>
+
+    <string-array name="nameArray">
+        <item>蘋果</item>
+        <item>酪梨</item>
+        <item>香蕉</item>
+        <item>櫻桃</item>
+        <item>椰子</item>
+        <item>葡萄</item>
+        <item>檸檬</item>
+        <item>橘子</item>
+        <item>桃子</item>
+    </string-array>
 </resources>
