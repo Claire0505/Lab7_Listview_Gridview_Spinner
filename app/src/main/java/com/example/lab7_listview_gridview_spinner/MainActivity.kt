@@ -25,17 +25,21 @@ class MainActivity : AppCompatActivity() {
         //回收TypeArray
         imgArray.recycle()
         //連結Adapter，設定layout為adapter_horizontal
-        binding.spinner.adapter = MyAdapter(R.layout.custom_adapter_horizintal, itemsData)
+        //改成ViewHolder目的是提升清單元件的效率，而不需要重複創建 相同結構的View 實體，讓資源得以重複利用。
+        binding.spinner.adapter = MyAdapterViewHolder(R.layout.custom_adapter_horizintal, itemsData)
+        //binding.spinner.adapter = MyAdapter(R.layout.custom_adapter_horizintal, itemsData)
 
         //設定橫向顯示的項目筆數
         binding.gridView.numColumns = 3
         //連結Adapter，設定layout為adapter_vertical
-        binding.gridView.adapter = MyAdapter(R.layout.custom_adapter_vertical, itemsData)
+        binding.gridView.adapter = MyAdapterViewHolder(R.layout.custom_adapter_vertical, itemsData)
+        //binding.gridView.adapter = MyAdapter(R.layout.custom_adapter_vertical, itemsData)
 
         //連結Adapter，設定layout為simple_list_item_1與字串陣列
         binding.listView.adapter =
-            //ArrayAdapter(this, android.R.layout.simple_list_item_1, nameArray)
-            MyAdapter(R.layout.custom_adapter_horizintal, itemsData)
+                MyAdapterViewHolder(R.layout.custom_adapter_horizintal, itemsData)
+        //ArrayAdapter(this, android.R.layout.simple_list_item_1, nameArray)
+        //MyAdapter(R.layout.custom_adapter_horizintal, itemsData)
     }
 }
 
